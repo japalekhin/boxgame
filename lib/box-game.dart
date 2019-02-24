@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flame/game.dart';
+import 'package:flutter/gestures.dart';
 
 class BoxGame extends Game {
   Size screenSize;
@@ -31,5 +32,9 @@ class BoxGame extends Game {
   void resize(Size size) {
     screenSize = size;
     super.resize(size);
+  }
+
+  void onTapDown(TapDownDetails d) {
+    // handle taps here
   }
 }

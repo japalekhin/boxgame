@@ -40,6 +40,14 @@ class BoxGame extends Game {
   }
 
   void onTapDown(TapDownDetails d) {
-    // handle taps here
+    double screenCenterX = screenSize.width / 2;
+    double screenCenterY = screenSize.height / 2;
+    if (d.globalPosition.dx >= screenCenterX - 75
+      && d.globalPosition.dy >= screenCenterY - 75
+      && d.globalPosition.dx <= screenCenterX + 75
+      && d.globalPosition.dy <= screenCenterY + 75
+    ) {
+      hasWon = true;
+    }
   }
 }
